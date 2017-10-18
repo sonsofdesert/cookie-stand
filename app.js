@@ -52,7 +52,6 @@ firstAndPike.calcCookiesSoldByHour();
 firstAndPike.calcRandCustByHour();
 firstAndPike.render();
 
-
 //second location
 var seaTacAirport = {
   name: 'SeaTac Airport',
@@ -101,7 +100,6 @@ var seaTacAirport = {
 seaTacAirport.calcCookiesSoldByHour();
 seaTacAirport.calcRandCustByHour();
 seaTacAirport.render();
-
 
 // //third location
 var seattleCenter = {
