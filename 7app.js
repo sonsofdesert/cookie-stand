@@ -1,9 +1,11 @@
 'use strict';
+
 //create array of open store hours
 var storeHours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm'];
 var cookiesPerHour = [];
 
 var dailyLocationTotal = [];
+var grandTotal = 0;
 
 function MakeLocation(name, minCustPerHour, maxCustPerHour, avgCookieSoldPerHour) {
   this.name = name;
@@ -27,8 +29,10 @@ function MakeLocation(name, minCustPerHour, maxCustPerHour, avgCookieSoldPerHour
     for(var j = 0; j < storeHours.length; j++) {
       var randomNumber = (Math.round(this.avgCookieSoldPerHour)) * this.randCustByHour[j] + 1;
       this.cookiesSoldByHour.push(randomNumber);
-      this.totalCookies = randomNumber + this.totalCookies;
+      var locationTotal = randomNumber + this.totalCookies;
+      this.totalCookies = locationTotal;
     }
+    grandTotal += this.totalCookies;
   };
   this.renderHeader = function() {
     var header = document.getElementById('thead');
@@ -80,24 +84,26 @@ var beans = new MakeLocation('SeaTac Airport', 44, 54, 13);
 beans.calcCookiesSoldByHour();
 beans.renderTable();
 
-var beans = new MakeLocation('Seattle Center', 44, 54, 13);
-beans.calcCookiesSoldByHour();
-beans.renderTable();
+var beans2 = new MakeLocation('Seattle Center', 44, 54, 13);
+beans2.calcCookiesSoldByHour();
+beans2.renderTable();
 
-var beans = new MakeLocation('Capitol Hill', 44, 54, 13);
-beans.calcCookiesSoldByHour();
-beans.renderTable();
+var beans3 = new MakeLocation('Capitol Hill', 44, 54, 13);
+beans3.calcCookiesSoldByHour();
+beans3.renderTable();
 
-var beans = new MakeLocation('Alki Beach', 44, 54, 13);
-beans.calcCookiesSoldByHour();
-beans.renderTable();
+var beans4 = new MakeLocation('Alki Beach', 44, 54, 13);
+beans4.calcCookiesSoldByHour();
+beans4.renderTable();
 
+console.log(grandTotal);
+
+// Total line
 var tableFoot = function() {
   var trEl = document.createElement('tr');
   var tfoot = document.getElementById('tfoot');
   var totalsTd = document.createElement('td');
   totalsTd.textContent = 'Totals';
-
   trEl.appendChild(totalsTd);
 
   for(var i = 0; i < storeHours.length; i++) {
@@ -109,6 +115,5 @@ var tableFoot = function() {
     tdEl.textContent = total;
     trEl.appendChild(tdEl);
   }
-  tfoot.appendChild(trEl);
 };
 tableFoot();
