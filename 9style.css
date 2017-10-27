@@ -18,8 +18,11 @@ th{
   border-top: 1px solid #999;
   text-align: left;
 }
-tr.even {
-  background-color: #efefef;
+tr:nth-child(even) {
+  background: green;
+}
+tr:nth-child(odd) {
+  background: blue;
 }
 tr:hover {
   background-color: #c3e6e5;
