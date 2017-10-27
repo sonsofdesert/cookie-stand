@@ -91,6 +91,7 @@ beans.renderTable();
 var beans = new MakeLocation('Alki Beach', 44, 54, 13);
 beans.calcCookiesSoldByHour();
 beans.renderTable();
+console.log('********')
 
 var tableFoot = function() {
   var trEl = document.createElement('tr');
@@ -110,5 +111,6 @@ var tableFoot = function() {
     trEl.appendChild(tdEl);
   }
   tfoot.appendChild(trEl);
+  console.log('the total is ' + total);
 };
 tableFoot();
