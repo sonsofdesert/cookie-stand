@@ -77,7 +77,6 @@ alkibeach.renderHeader();
 alkibeach.calcCookiesSoldByHour();
 alkibeach.renderTable();
 
-
 var beans = new MakeLocation('SeaTac Airport', 44, 54, 13);
 beans.calcCookiesSoldByHour();
 beans.renderTable();
