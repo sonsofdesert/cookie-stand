@@ -76,7 +76,7 @@ var alkibeach = new MakeLocation('First and Pike', 2, 4, 3);
 alkibeach.renderHeader();
 alkibeach.calcCookiesSoldByHour();
 alkibeach.renderTable();
-// alkibeach.tableFoot();
+
 
 var beans = new MakeLocation('SeaTac Airport', 44, 54, 13);
 beans.calcCookiesSoldByHour();
