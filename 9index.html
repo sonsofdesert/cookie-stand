@@ -1,1 +1,40 @@
-In progress
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Pats Salmon Cookies</title>
+    <link rel="stylesheet" href="9style.css">
+  </head>
+  <body background="SeattleCity2.jpg" id="body">
+    <img id="fish" src="salmon.png" width="500" height="200"/>
+    <form id="store-form">
+      <p><h1>Welcome to Pats Salmon Cookie Shop!</h1></p>
+      <br />
+      <p><h3>Here we sell cookies that aren't as nasty as they certainly sound. Our location is 555 W 123 St, Seattle, WA</h3></p>
+      <b />
+      <p><h2>So come on down anytime Monday-Saturday 6am-8pm. We'll see you there!</h2></p>
+      <fieldset>
+        <legend>Add Store Location</legend>
+        <label for="storename">Name of Location: </label>
+        <input id="storename" name="storename" type="text" />
+        </br>
+        <label for="mincust">Minimum Customers per Hour: </label>
+        <input id="mincust" name="mincust" type="text" />
+        </br>
+        <label for="maxcust">Maximum Customers per Hour: </label>
+        <input id="maxcust" name="maxcust" type="text"/>
+        </br>
+        <label for="avgcook">Average Cookies per Sale: </label>
+        <input id="avgcook" name="avgcook" type="text"/>
+        </br>
+        <button id="createNewStore" type="submit">Create a new store</button>
+      </fieldset>
+    </form>
+    <table>
+      <thead id="thead"></thead>
+      <tbody id="tbody"></tbody>
+      <tfoot id="tfoot"></tfoot>
+    </table>
+    <script src="9app.js" type="text/javascript"></script>
+  </body>
+</html>
