@@ -71,7 +71,6 @@ function MakeLocation(name, minCustPerHour, maxCustPerHour, avgCookieSoldPerHour
   };
   cookiesPerHour.push(this.cookiesSoldByHour);
 }
-
 var alkibeach = new MakeLocation('First and Pike', 2, 4, 3);
 alkibeach.renderHeader();
 alkibeach.calcCookiesSoldByHour();
